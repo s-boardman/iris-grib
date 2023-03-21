@@ -28,7 +28,7 @@ To use ``iris-grib`` to load existing GRIB files we can make use of the
     >>> import iris_grib
     >>> cubes = iris_grib.load_cubes(os.path.join(iris_sample_data.path,
                                                   'polar_stereo.grib2'))
-    >>> print cubes
+    >>> print(cubes)
     <generator object load_cubes at 0x7f69aba69d70>
 
 As we can see, this returns a generator object. The generator object may be iterated
@@ -36,7 +36,7 @@ over to access all the Iris cubes loaded from the GRIB file, or converted direct
 to a list::
 
     >>> cubes = list(cubes)
-    >>> print cubes
+    >>> print(cubes)
     [<iris 'Cube' of air_temperature / (K) (projection_y_coordinate: 200; projection_x_coordinate: 247)>]
 
 .. note::
@@ -46,7 +46,7 @@ to a list::
     GRIB file you have loaded contains data that can be loaded to a single cube::
 
         >>> cube, = list(cubes)
-        >>> print cube
+        >>> print(cube)
         air_temperature / (K)               (projection_y_coordinate: 200; projection_x_coordinate: 247)
              Dimension coordinates:
                   projection_y_coordinate                           x                             -
